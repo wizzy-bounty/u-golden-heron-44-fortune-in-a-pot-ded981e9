@@ -19,11 +19,12 @@ FORTUNE = (
 
 OUTPUT_PATH = "/output/entry.txt"
 MAX_CHARS = 120
+MAX_ENTRY_CHARS = 120
 
 
 def main() -> None:
     text = FORTUNE.strip()
-    if not (1 <= len(text) <= MAX_CHARS):
+    if not (1 <= len(text) <= MAX_ENTRY_CHARS):
         raise SystemExit(
             "fortune must be 1-%d characters, got %d" % (MAX_CHARS, len(text))
         )
